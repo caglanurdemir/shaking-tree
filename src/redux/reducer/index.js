@@ -1,16 +1,15 @@
 import {
     SET_APPLES,
     SHAKE_THE_TREE,
-    IS_SHAKE_END,
     ADD_TO_BASKET,
 } from "../action/actionTypes";
 
+// Initial state for app
 const initialState = {
     isShaking: false,
     apples: [],
     movingApple: {},
     basket: [],
-    isShakeEnd: false,
 };
 
 export default function reducer(state = initialState, action) {
@@ -25,12 +24,9 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 isShaking: !state.isShaking,
             };
-        case IS_SHAKE_END:
-            return {
-                ...state,
-                isShakeEnd: action.data,
-            };
         case ADD_TO_BASKET: {
+            // This action finds the apple that fell on the ground.
+            //Subtracts this from the apples array and adds it to the basket array
             const currentApple = state.apples.find(
                 (apple) => apple.id === action.data
             );

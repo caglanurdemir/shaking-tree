@@ -5,6 +5,8 @@ import treePng from "../assets/tree.png";
 import { Apple } from "../components";
 import "../index.css";
 
+// Tree component generates the tree image on grid system
+// Then renders apples that matches the apple indexes on the store
 const Tree = () => {
     const isShaking = useSelector((state) => state.isShaking);
     const apples = useSelector((state) => state.apples);

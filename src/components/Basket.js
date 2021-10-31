@@ -5,6 +5,8 @@ import applePng from "../assets/apple.png";
 import basketPng from "../assets/basket.png";
 import "../index.css";
 
+// Basket component generates the basket image
+// Also makes the apples appear in the basket 1 second after the apples fall.
 const Basket = () => {
     const basket = useSelector((state) => state.basket);
 

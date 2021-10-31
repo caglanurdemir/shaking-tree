@@ -9,7 +9,9 @@ import { randomIntFromInterval } from "./utils/utilFunctions";
 
 function App() {
     const dispatch = useDispatch();
-
+    
+    // Predefined apple generated at the beginning of the code
+    // And added to the redux store
     useEffect(() => {
         const appleCount = randomIntFromInterval(2, 6);
         let appleArray = [];
@@ -25,6 +27,8 @@ function App() {
         dispatch(setApples(appleArray));
     });
 
+    // Button, Tree and Basket components
+    // Apple components are called from Tree component
     return (
         <Flex
             flexDirection="column"

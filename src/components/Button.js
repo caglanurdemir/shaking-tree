@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import "../index.css";
 import { shakeTheTree } from "../redux/action";
 
+// Chakra-UI implemented for a nicer ui deesign
+
+// Button component is disabled until the all apples fall
 const Button = () => {
     const dispatch = useDispatch();
     const [isButtonEnabled, setIsButtonEnabled] = useState(true);
