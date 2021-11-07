@@ -13,6 +13,7 @@ const Button = () => {
     const apples = useSelector((state) => state.apples);
 
     const handleButtonClick = () => {
+        if (apples.length === 0) return;
         dispatch(shakeTheTree());
         setIsButtonEnabled(false);
         setTimeout(() => {
